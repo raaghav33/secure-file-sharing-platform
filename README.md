@@ -1,68 +1,74 @@
-<<<<<<< HEAD
-\# Secure File Sharing Platform (v0.5)
+# Secure File Sharing Platform
 
+A cloud-based file sharing platform built using FastAPI and Google Cloud Storage. Users can upload PDF files, receive a unique access code, and securely retrieve files using that code. Files are stored in Google Cloud Storage and can be configured to expire automatically.
 
+## Features
 
-A cloud-based file sharing platform built using FastAPI and Google Cloud Storage.
+* Upload PDF files to Google Cloud Storage
+* Generate unique access codes for file retrieval
+* Retrieve files using access codes
+* Signed upload URLs for secure uploads
+* Signed download URLs for secure downloads
+* Temporary file hosting with configurable expiry
+* REST API built with FastAPI
 
+## Tech Stack
 
+* Python
+* FastAPI
+* Google Cloud Storage (GCS)
+* Uvicorn
+* REST APIs
+* Git & GitHub
 
-\## Features
+## API Endpoints
 
+### Upload File
 
+POST `/upload`
 
-\- File Upload
+Uploads a PDF and returns a unique access code.
 
-\- File Download
+### Retrieve File
 
-\- Unique Access Codes
+GET `/get/{code}`
 
-\- Google Cloud Storage Integration
+Retrieves a file using its access code.
 
-\- Signed Upload URLs
+### Generate Signed Upload URL
 
-\- Temporary File Hosting
+GET `/signed-upload-url`
 
+Generates a secure upload URL for direct uploads to GCS.
 
+### Cleanup Expired Files
 
-\## Tech Stack
+POST `/cleanup`
 
+Removes expired files from storage.
 
+## Project Status
 
-\- Python
+Backend MVP Completed
 
-\- FastAPI
+Verified Functionality:
 
-\- Google Cloud Storage
+* File upload
+* File retrieval
+* Unique code generation
+* Google Cloud Storage integration
+* Signed URL workflow
 
-\- REST APIs
+Planned Improvements:
 
-\- Git
+* Modern React frontend
+* Drag-and-drop uploads
+* Deployment
+* Enhanced security and monitoring
 
+## Author
 
+Raaghav Baskaran
 
-\## Project Status
-
-
-
-Version 0.5 (Work in Progress)
-
-
-
-Currently working on:
-
-\- Deployment
-
-\- Automated Cleanup
-
-\- Security Improvements
-
-
-
-\## Author
-
-
-
-Raaghav B.K.
 
 

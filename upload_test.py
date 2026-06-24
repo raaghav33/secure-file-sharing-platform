@@ -1,7 +1,7 @@
 # upload_test.py
 import os, requests, sys
 
-PATH = r"D:\COLLEGE\DISCRETE MATHS\DMNM_s.pdf"   # ← change if your file is different
+PATH = r"sample.pdf"  # ← change if your file is different
 if not os.path.exists(PATH):
     print("ERROR: file not found at", PATH); sys.exit(1)
 
